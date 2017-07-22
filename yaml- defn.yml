@@ -1,0 +1,126 @@
+swagger: '2.0'
+info:
+  title: projexpservice.azurewebsites.net
+  version: 1.0.0
+host: projexpservice.azurewebsites.net
+basePath: /
+schemes:
+  - https
+  - http
+paths:
+  /api/CreateExpense:
+    post:
+      operationId: /api/CreateExpense
+      produces:
+        - application/json
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: Inserts an expense item
+          required: true
+          schema:
+            $ref: '#/definitions/Expenses'
+      description: >-
+        Replace with Operation Object
+        #http://swagger.io/specification/#operationObject
+      responses:
+        '200':
+          description: Success operation
+        '405':
+          description: Invalid input
+      security:
+        - apikeyQuery: []
+  /api/GetAllExpenses:
+    get:
+      operationId: /api/GetAllExpenses
+      produces:
+        - application/json
+      consumes: []
+      parameters: []
+      description: >-
+        Replace with Operation Object
+        #http://swagger.io/specification/#operationObject
+      responses:
+        '200':
+          description: Success operation
+          schema:
+            $ref: '#/definitions/GetAllExpensesResponse'
+      security:
+        - apikeyQuery: []
+  /api/countries:
+    get:
+      operationId: /api/countries
+      produces:
+        - application/json
+      consumes: []
+      parameters: []
+      description: >-
+        Replace with Operation Object
+        #http://swagger.io/specification/#operationObject
+      responses:
+        '200':
+          description: Success operation
+          schema:
+            $ref: '#/definitions/GetAllCountriesResponse'
+      security:
+        - apikeyQuery: []
+definitions:
+  GetAllCountriesResponse:
+    type: array
+    items:
+      $ref: '#/definitions/Countries'
+  GetAllExpensesResponse:
+    type: array
+    items:
+      $ref: '#/definitions/Expenses'
+  Countries:
+    type: object
+    properties:
+      name:
+        type: string
+  Expenses:
+    type: object
+    properties:
+      id:
+        type: string
+      empid:
+        type: string
+      description:
+        type: string
+      expensedate:
+        type: string
+      amount:
+        type: number
+      currency:
+        type: string
+      item:
+        type: string
+      country:
+        type: string
+      email:
+        type: string
+    required:
+      - id
+      - empid
+      - expensedate
+      - amount
+      - currency
+      - item
+      - country
+      - email
+    example:
+      id: f3198d5e-341d-4267-bf63-bb3ef692b70d
+      empid: emp001
+      expensedate: 12/12/2017
+      amount: 123.45
+      currency: inr
+      item: cabhire
+      country: india
+      email: test@contoso.com
+securityDefinitions:
+  apikeyQuery:
+    type: apiKey
+    name: code
+    in: query
