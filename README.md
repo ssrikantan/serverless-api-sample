@@ -22,7 +22,6 @@ Apart from the HTTPTrigger input binding for the incoming request, an additional
 
 <img src="https://msdnshared.blob.core.windows.net/media/2017/07/GetAppExpensesRequest.jpg" alt="drawing" height="150px"/>
 
-<img src="https://msdnshared.blob.core.windows.net/media/2017/07/powerapps-screen11.jpg" alt="drawing" height="500px"/>
 *Note: The scripts provided here are only meant to illustrate the point, and do not handle best practices, Exceptions, etc*
 
 Refer to the Azure Documentation for detailed guidance on configuring Bindings in Azure Functions, for HTTPTriggers and Azure CosmosDB 
@@ -34,7 +33,7 @@ Notice that there are 2 output bindings here, one for the HttpResponse and the o
 
 Note: When the Run method in  a Function is invoked asynchronously, we cannot use an 'out' parameter to the Cosmos DB Binding and an 'out' for the HttpResponse in it. In such cases, we need to add the document meant for insertion into an IAsyncCollector Object reference, 'collector' in this case. Note that the  parameter 'collector' is used in the output binding to Cosmos DB, shown above . Refer to the documentation [here](https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference-csharp) for more info pertaining to scenarios with multiple output parameters.
 
-<img src="https://msdnshared.blob.core.windows.net/media/2017/07/CreateProjectRequests2.jpg" alt="drawing" height="300px"/>
+<img src="https://msdnshared.blob.core.windows.net/media/2017/07/CreateProjectRequests2.jpg" alt="drawing" height="150px"/>
 
 3. Test the Functions created 
 Use Postman to ensure both the Functions work without errors. The HttpTrigger Url can be obtained from the C# Script Editor View of the Function
