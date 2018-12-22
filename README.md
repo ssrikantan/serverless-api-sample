@@ -1,5 +1,5 @@
 
-# serverlessapisample
+# serverless api sample
 
 Azure Functions can be used to quickly stand up Application Services, using a Micro Services based architecture, complete with integration with other Azure Services like Cosmos DB, Queues, Blobs, etc , through the use of Input and output Bindings. Inbuilt tools can be used to generate Swagger definitions for these Services and consume them in Client side Applications running across device platforms.
 In this article , an Azure Function App comprising of 2 different Functions that perform CRUD operations on data residing in Azure Cosmos DB, will be created. The Function App would be exposed as a REST callable endpoint that would be consumed by a Microsoft Powerapps Application. This use case does not require an IDE for development. It can be built entirely from the Azure Portal and the browser. The Powerapps App file, C# Script files, Yaml file for the Open API Specs created for this article can be downloaded from this Repo
@@ -7,7 +7,7 @@ In this article , an Azure Function App comprising of 2 different Functions that
 1. Creation of a DocumentDB database in Azure Cosmos DB
 Use the Azure portal to create a DocumentDB database. For the use case described in this article, created is a Collection (expensescol) that stores Project Expense details, comprising the attributes shown below.
 
-<img src="https://msdnshared.blob.core.windows.net/media/2017/07/cosmodb.jpg" alt="drawing" height="250px"/>
+<img src="https://msdnshared.blob.core.windows.net/media/2017/07/cosmodb.jpg" alt="drawing" height="250px" border-color: "red"/>
 
 2. Creation of a Function App that implements the Business Logic in Service
 Two Functions are created in this Function App using C# Scripts.
