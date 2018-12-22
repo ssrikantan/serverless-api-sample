@@ -7,7 +7,7 @@ In this article , an Azure Function App comprising of 2 different Functions that
 1. Creation of a DocumentDB database in Azure Cosmos DB
 Use the Azure portal to create a DocumentDB database. For the use case described in this article, created is a Collection (expensescol) that stores Project Expense details, comprising the attributes shown below.
 
-<img src="https://msdnshared.blob.core.windows.net/media/2017/07/cosmodb.jpg" alt="drawing" height="250px" border-color: "red"/>
+<img src="https://msdnshared.blob.core.windows.net/media/2017/07/cosmodb.jpg" alt="drawing" height="250px" border-color= "red"/>
 
 2. Creation of a Function App that implements the Business Logic in Service
 Two Functions are created in this Function App using C# Scripts.
