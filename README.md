@@ -60,7 +60,7 @@ After the Yaml is created and the definition is complete, test the requests from
 While you could start with a blank Template, it involves some work to create the different Forms required in the App for 'Display All', 'Edit' and 'Browse All' use cases. Powerapps supports the ability to automatically generate all these Forms and provide a complete App, when selecting a Data Source like OneDrive, SharePoint Office 365 Lists, and many others. Since the 'ProjExpensesAPI' Connector we have created is a custom one, this Wizard is not available to create the App automatically.
 To work around this, I have created a Custom List in Office 365, that has the same fields as in the Expense data returned by the Function App. I used the wizard to generate a complete App based on the Custom List in Office 365, and then changed all the Data Source references from it to the 'ProjExpensesAPI' Connection.
 
-<img src="https://msdnshared.blob.core.windows.net/media/2017/07/powerapps-screen11.jpg" alt="drawing" height="250px"/>
+<img src="https://msdnshared.blob.core.windows.net/media/2017/07/powerapps-screen11.jpg" alt="drawing" height="350px"/>
 
 Note in the screenshot above, how the Logged in User context can be passed through 'Excel like' functions to the Search Box. The data is filtered after it is received from the REST APIs. Notice how our custom API is invoked below, and the data returned is filtered using the expression shown
 
