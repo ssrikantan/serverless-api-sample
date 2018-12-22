@@ -54,7 +54,7 @@ After the Yaml is created and the definition is complete, test the requests from
 
 5. Create a new custom Connection in powerapps.microsoft.com from the connector registered in the previous step. Embed the Security code for the Function App. This gets stored with the connection and automatically included in the request by Powerapps to the REST Services deployed on Azure Functions.
 
-<img src="https://msdnshared.blob.core.windows.net/media/2017/07/Powerapps-Custom-connection1.jpg" alt="drawing" height="500px"/>
+<img src="https://msdnshared.blob.core.windows.net/media/2017/07/Powerapps-Custom-connection1.jpg" alt="drawing" height="300px"/>
 
 6. Create a new Powerapps App that would consume the REST Services exposed by Azure Functions in the earlier steps
 While you could start with a blank Template, it involves some work to create the different Forms required in the App for 'Display All', 'Edit' and 'Browse All' use cases. Powerapps supports the ability to automatically generate all these Forms and provide a complete App, when selecting a Data Source like OneDrive, SharePoint Office 365 Lists, and many others. Since the 'ProjExpensesAPI' Connector we have created is a custom one, this Wizard is not available to create the App automatically.
