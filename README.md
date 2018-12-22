@@ -33,7 +33,7 @@ Notice that there are 2 output bindings here, one for the HttpResponse and the o
 
 Note: When the Run method in  a Function is invoked asynchronously, we cannot use an 'out' parameter to the Cosmos DB Binding and an 'out' for the HttpResponse in it. In such cases, we need to add the document meant for insertion into an IAsyncCollector Object reference, 'collector' in this case. Note that the  parameter 'collector' is used in the output binding to Cosmos DB, shown above . Refer to the documentation [here](https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference-csharp) for more info pertaining to scenarios with multiple output parameters.
 
-<img src="https://msdnshared.blob.core.windows.net/media/2017/07/CreateProjectRequests2.jpg" alt="drawing" height="150px"/>
+<img src="https://msdnshared.blob.core.windows.net/media/2017/07/CreateProjectRequests2.jpg" alt="drawing" height="300px"/>
 
 3. Test the Functions created 
 Use Postman to ensure both the Functions work without errors. The HttpTrigger Url can be obtained from the C# Script Editor View of the Function
@@ -47,7 +47,7 @@ Click on the button 'Generate API definition template' to generate a base defini
 <img src="https://msdnshared.blob.core.windows.net/media/2017/07/OpenApiDefinition1.jpg" alt="drawing" height="500px"/>
 
 Refer to [this](https://docs.microsoft.com/en-us/azure/azure-functions/functions-openapi-definition) , [this](https://blogs.msdn.microsoft.com/appserviceteam/2017/03/30/announcing-functions-swagger-support/)  and [this](https://blog.kloud.com.au/2017/06/13/azure-functions-with-swagger/) links that provides guidance on working with Yaml to create the Swagger definitions, or using other options to create it.
-Note: The samples considered in the links above use simple primitive types as parameters in the Method calls. The scenario in this article however deals with Collections, and needs more work to get the Yaml right. Refer to the artefacts download link in this article to view the Yaml that was created for the scenario in this blog post]
+Note: The samples considered in the links above use simple primitive types as parameters in the Method calls. The scenario in this article however deals with Collections, and needs more work to get the Yaml right. Refer to the artefacts download link in this article to view the Yaml that was created for the scenario in this post]
 
 Note: For simplicity in this article, I have considered the option provided by Functions to add the API key in the Request URL, under the key 'code'.  For more secure ways to deal with it, use Azure AD integration or other options
 After the Yaml is created and the definition is complete, test the requests from the Test console on the Web Page, and ensure that the Functions work without errors. Once tested, click on the button 'Export to Power Apps and Flow' to export the Swagger definition and create a Custom connector in the latter.
