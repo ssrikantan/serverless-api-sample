@@ -20,7 +20,8 @@ The Input and output Binding configured for this Function:
 
 Apart from the HTTPTrigger input binding for the incoming request, an additional input binding for Cosmos DB  is configured that retrieves all the Expense records from the database. Due to this binding, all the Expense records are available to the Run Method through the 'documents' input parameter - see screenshot of the C# Script used in this Function, below.
 
-<img src="https://msdnshared.blob.core.windows.net/media/2017/07/GetAppExpensesRequest.jpg" alt="drawing" height="300px"/>
+<img src="https://msdnshared.blob.core.windows.net/media/2017/07/GetAppExpensesRequest.jpg" alt="drawing" height="150px"/>
+
 <img src="https://msdnshared.blob.core.windows.net/media/2017/07/powerapps-screen11.jpg" alt="drawing" height="500px"/>
 *Note: The scripts provided here are only meant to illustrate the point, and do not handle best practices, Exceptions, etc*
 
